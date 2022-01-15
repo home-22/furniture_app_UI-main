@@ -1,23 +1,28 @@
-import 'dart:convert';
-import 'dart:html';
+class Category {
+  final String id, title, image;
+  final int numOfProducts;
 
-import 'package:app_in/models/Categories.dart';
-import 'package:http/http.dart' as http;
+  Category(
+      {required this.id,
+      required this.title,
+      required this.image,
+      required this.numOfProducts});
 
-// Fetch our Categories from API
-Future<List<Category>> fetchCategories() async {
-  const String uri =
-      "https://5f210aa9daa42f001666535e.mockapi.io/api/categories";
-
-  final response = await http.get(Uri());
-
-  if (response.statusCode == 200) {
-    List<Category> categories = (json.decode(response.body) as List)
-        .map((data) => Category.fromJson(data))
-        .toList();
-
-    return categories;
-  } else {
-    throw Exception('Failed to load');
+  // It creates an Category from JSON
+  factory Category.fromJson(Map<String, dynamic> json) {
+    return Category(
+      id: json["id"],
+      title: json["title"],
+      image: json["image"],
+      numOfProducts: json["numOfProducts"],
+    );
   }
 }
+
+// Our demo category
+Category category = Category(
+  id: "1",
+  title: "Armchair",
+  image: "https://i.imgur.com/JqKDdxj.png",
+  numOfProducts: 100,
+);
