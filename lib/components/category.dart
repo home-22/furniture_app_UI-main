@@ -37,6 +37,7 @@ class Category extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.cyan[900],
                   fontWeight: FontWeight.w700,
+                  fontSize: 18,
                 ),
               ),
             ),

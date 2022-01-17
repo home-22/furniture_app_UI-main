@@ -14,7 +14,7 @@ class HomeListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: 150,
+        height: 260,
         width: double.infinity,
         child: ListView.builder(
           itemCount: items.length,
@@ -33,8 +33,8 @@ class HomeListView extends StatelessWidget {
                 children: [
                   Container(
                     margin: const EdgeInsets.only(left: 30, top: 50),
-                    height: 150,
-                    width: 150,
+                    height: 200,
+                    width: 200,
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
                       borderRadius: BorderRadius.circular(30),
@@ -67,7 +67,7 @@ class HomeListView extends StatelessWidget {
                           height: 40,
                           width: 40,
                           decoration: BoxDecoration(
-                            color: Colors.cyan[900],
+                            color: Colors.lightBlue,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Icon(
