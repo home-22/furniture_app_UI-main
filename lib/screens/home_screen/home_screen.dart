@@ -1,10 +1,10 @@
+import 'package:app_in/screens/home_screen/components/home_list_view.dart';
 import 'package:app_in/screens/home_screen/components/news.dart';
+import 'package:app_in/screens/home_screen/components/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:app_in/components/category.dart';
 import 'package:app_in/data/dummy_data.dart';
 import 'package:app_in/models/items.dart';
-import 'package:app_in/screens/product_detail/components/home_list_view.dart';
-import 'package:app_in/screens/product_detail/components/search_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
