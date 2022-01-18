@@ -53,7 +53,7 @@ class SearchBar extends StatelessWidget {
                   height: 48,
                   width: 48,
                   decoration: BoxDecoration(
-                      color: Colors.cyan[900],
+                      color: Colors.lightBlueAccent,
                       borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15),
