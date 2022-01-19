@@ -1,6 +1,7 @@
+import 'package:app_in/models/items.dart';
+import 'package:app_in/screens/product_detail/components/avaliable_colors.dart';
 import 'package:app_in/screens/product_detail/components/bottom.dart';
 import 'package:app_in/screens/product_detail/components/prod_title_price_stars.dart';
-import 'package:app_in/models/items.dart';
 import 'package:flutter/material.dart';
 
 class AboutProduct extends StatelessWidget {
@@ -31,6 +32,8 @@ class AboutProduct extends StatelessWidget {
             title: product.name,
             rate: product.rate,
           ),
+          const SizedBox(height: 10),
+          ProdAvaliableColors(colors: product.avaliableColors),
           const SizedBox(height: 10),
           Text(
             product.description,

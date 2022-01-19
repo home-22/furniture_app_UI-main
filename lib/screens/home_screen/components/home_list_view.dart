@@ -88,7 +88,7 @@ class HomeListView extends StatelessWidget {
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          '\$ ${items[i].price.toString()}',
+                          "\$ ${items[i].price.toString()}",
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,

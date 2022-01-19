@@ -17,7 +17,7 @@ class SearchBar extends StatelessWidget {
               Expanded(
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: 'Search products',
+                    labelText: "Search products",
                     border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(10),
@@ -35,7 +35,7 @@ class SearchBar extends StatelessWidget {
                     prefixIcon: Padding(
                       padding: const EdgeInsets.all(15),
                       child: SvgPicture.asset(
-                        'assets/photos/svg/search.svg',
+                        "assets/photos/svg/search.svg",
                         width: 20,
                         color: Colors.grey,
                       ),
@@ -47,7 +47,7 @@ class SearchBar extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   // ignore: avoid_print
-                  print('Search settings');
+                  print("Search settings");
                 },
                 child: Container(
                   height: 48,
@@ -58,7 +58,7 @@ class SearchBar extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(15),
                     child: SvgPicture.asset(
-                      'assets/photos/svg/setting-lines.svg',
+                      "assets/photos/svg/setting-lines.svg",
                       color: Colors.white,
                     ),
                   ),

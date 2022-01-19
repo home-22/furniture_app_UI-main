@@ -1,10 +1,10 @@
+import 'package:app_in/components/category.dart';
+import 'package:app_in/data/dummy_data.dart';
+import 'package:app_in/models/items.dart';
 import 'package:app_in/screens/home_screen/components/home_list_view.dart';
 import 'package:app_in/screens/home_screen/components/news.dart';
 import 'package:app_in/screens/home_screen/components/search_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:app_in/components/category.dart';
-import 'package:app_in/data/dummy_data.dart';
-import 'package:app_in/models/items.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -21,44 +21,44 @@ class _HomeScreenState extends State<HomeScreen> {
         body: CustomScrollView(
           slivers: [
             const SearchBar(),
-            const SliverToBoxAdapter(child: SizedBox(height: 30)),
+            const SliverToBoxAdapter(child: SizedBox(height: 29)),
             const HomeNews(),
-            const SliverToBoxAdapter(child: SizedBox(height: 30)),
+            const SliverToBoxAdapter(child: SizedBox(height: 29)),
 
             // ! POPULAR
             Category(
-              title: 'Popular',
-              buttonTitle: 'Show All',
+              title: "Popular",
+              buttonTitle: "Show All",
               onPress: () {},
             ),
             HomeListView(
               items: dummyList.where((element) => element.rate >= 4.5).toList(),
             ),
             // ! CHAIRS
-            const SliverToBoxAdapter(child: SizedBox(height: 30)),
-            const Category(title: 'Chairs', buttonTitle: 'See more'),
+            const SliverToBoxAdapter(child: SizedBox(height: 29)),
+            const Category(title: "Chairs", buttonTitle: "See more"),
             HomeListView(
               items: dummyList
                   .where((element) => element.type == ItemType.chair)
                   .toList(),
             ),
             // ! BEDS
-            const SliverToBoxAdapter(child: SizedBox(height: 30)),
-            const Category(title: 'Beds', buttonTitle: 'See more'),
+            const SliverToBoxAdapter(child: SizedBox(height: 29)),
+            const Category(title: "Beds", buttonTitle: "See more"),
             HomeListView(
               items: dummyList
                   .where((element) => element.type == ItemType.bed)
                   .toList(),
             ),
             // ! TABLES
-            const SliverToBoxAdapter(child: SizedBox(height: 30)),
-            const Category(title: 'Tables', buttonTitle: 'See more'),
+            const SliverToBoxAdapter(child: SizedBox(height: 29)),
+            const Category(title: "Tables", buttonTitle: "See more"),
             HomeListView(
               items: dummyList
                   .where((element) => element.type == ItemType.table)
                   .toList(),
             ),
-            const SliverToBoxAdapter(child: SizedBox(height: 30)),
+            const SliverToBoxAdapter(child: SizedBox(height: 29)),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -66,30 +66,30 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-                color: Colors.cyan[900],
+                color: Colors.lightBlue[400],
               ),
-              label: 'Home',
+              label: "Home",
             ),
             const BottomNavigationBarItem(
               icon: Icon(
                 Icons.shopping_cart,
                 color: Colors.grey,
               ),
-              label: 'Cart',
+              label: "Cart",
             ),
             const BottomNavigationBarItem(
               icon: Icon(
                 Icons.favorite,
                 color: Colors.grey,
               ),
-              label: 'Favorite',
+              label: "Favorite",
             ),
             const BottomNavigationBarItem(
               icon: Icon(
                 Icons.settings,
                 color: Colors.grey,
               ),
-              label: 'Settings',
+              label: "Settings",
             ),
           ],
         ),

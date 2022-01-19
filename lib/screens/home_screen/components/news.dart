@@ -20,7 +20,7 @@ class HomeNews extends StatelessWidget {
           ),
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('assets/photos/news_background.jpg'),
+            image: AssetImage("assets/photos/news_background.jpg"),
           ),
           boxShadow: [
             BoxShadow(
@@ -36,7 +36,7 @@ class HomeNews extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Text(
-                'Black Friday',
+                "Black Friday",
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -50,7 +50,7 @@ class HomeNews extends StatelessWidget {
                 ),
               ),
               Text(
-                '25% off on all beds',
+                "25% off on all beds",
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,

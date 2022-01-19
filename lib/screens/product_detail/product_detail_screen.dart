@@ -2,6 +2,8 @@ import 'package:app_in/data/dummy_data.dart';
 import 'package:app_in/models/items.dart';
 import 'package:flutter/material.dart';
 
+import 'components/details.dart';
+
 class ProductDetailScreen extends StatelessWidget {
   final String id;
   const ProductDetailScreen({Key? key, required this.id}) : super(key: key);
@@ -47,6 +49,11 @@ class ProductDetailScreen extends StatelessWidget {
                     product.imageUrl,
                     fit: BoxFit.fill,
                   ),
+                ),
+              ),
+              Expanded(
+                child: AboutProduct(
+                  product: product,
                 ),
               ),
             ],
